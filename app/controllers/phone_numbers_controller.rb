@@ -13,7 +13,7 @@ class PhoneNumbersController < ApplicationController
         }, 422)
 			else
 				user.phone_numbers.create!(p_number: params[:p_number])
-				render_success_response({}, "Phone number allocated Successfully ", 200)
+				render_success_response({}, "Congratulations, You got your choice of number successfully", 200)
 			end
 		else
 			user.phone_numbers.create!(p_number: rand(1111111111..9999999999))
